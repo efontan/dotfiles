@@ -1,0 +1,23 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[mergetool]
+	prompt = false
+	keepBackup = false
+[merge]
+    tool = meld
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    last = log -n 1
+    cp = cherry-pick
+    cm = commit -m
+[user]
+	email = your@email.com
+	name = Your name
