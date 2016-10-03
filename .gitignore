@@ -1,0 +1,26 @@
+*.class
+*.log
+
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/target
+project/project
+.settings
+.classpath
+.project
+
+# IntelliJ
+.idea
+.idea_modules
+
+# Specific files
+*.iml
+.DS_Store
+logs
