@@ -1,11 +1,17 @@
+[user]
+	email = your@email.com
+	name = Your name
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+    branch = true
+    interactive = auto
+    diff = auto
+    status = auto
+    ui = always
 [mergetool]
-	prompt = false
-	keepBackup = false
+    prompt = false
+    keepBackup = false
+[core]
+    editor = vim
 [merge]
     tool = meld
 [alias]
@@ -13,11 +19,17 @@
     ci = commit
     st = status
     br = branch
+    amend = commit --amend
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     type = cat-file -t
     last = log -n 1
     cp = cherry-pick
     cm = commit -m
-[user]
-	email = your@email.com
-	name = Your name
+    lognm = log --no-merges -n
+    cob = checkout -b
+    lastcommit = rev-list --max-parents=0 HEAD
+[commit]
+    gpgsign = true
+
+
+	
