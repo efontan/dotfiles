@@ -1,5 +1,6 @@
 import scala.xml._
 
+// Source https://gist.github.com/mslinn/21684f1e5da630dfd734
 // To convert a Maven pom.xml to build.sbt:
 // 1) Place this code into a file called PomToSbt.scala next to pom.xml
 // 2) Type scala PomtoSbt.scala > build.sbt
