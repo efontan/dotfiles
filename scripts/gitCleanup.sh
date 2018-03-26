@@ -14,7 +14,7 @@ git checkout $MAIN_BRANCH -q
 git fetch -p
 
 # delete local branches no longer on remote
-remote_branches=$(git ls-remote --heads --quiet | grep -v master | awk -F/ '{ print $3 }')
+remote_branches=$(git ls-remote --heads --quiet | grep -v $MAIN_BRANCH | awk -F/ '{ print $3 }')
 branches_to_delete=()
 
 for local_branch in $(git for-each-ref --format='%(refname:short)' refs/heads/ | grep -v $MAIN_BRANCH); do
