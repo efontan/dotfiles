@@ -11,7 +11,7 @@
 
 MAIN_BRANCH="master"
 git checkout $MAIN_BRANCH -q
-#git fetch -p
+git fetch -p
 
 # delete local branches no longer on remote
 remote_branches=$(git ls-remote --heads --quiet | grep -v master | awk -F/ '{ print $3 }')
