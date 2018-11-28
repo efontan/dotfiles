@@ -1,6 +1,6 @@
 [user]
-	email = your@email.com
-	name = Your name
+	name = Emmanuel Fontan
+	email = efontan@despegar.com
 [color]
     branch = true
     interactive = auto
@@ -12,11 +12,13 @@
     keepBackup = false
 [core]
     editor = vim
+	ignorecase = false
 [merge]
     tool = meld
 [alias]
     co = checkout
-    ci = commit
+    ci = commit -S
+    commit = commit -s
     st = status
     br = branch
     amend = commit --amend
@@ -28,8 +30,6 @@
     lognm = log --no-merges -n
     cob = checkout -b
     lastcommit = rev-list --max-parents=0 HEAD
+	logs = log --show-signature
 [commit]
-    gpgsign = true
-
-
-	
+	gpgsign = true
