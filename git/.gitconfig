@@ -12,6 +12,7 @@
     keepBackup = false
 [core]
     editor = vim
+    autocrlf = true
 [merge]
     tool = meld
 [alias]
@@ -30,6 +31,4 @@
     lastcommit = rev-list --max-parents=0 HEAD
 [commit]
     gpgsign = true
-
-
 	
