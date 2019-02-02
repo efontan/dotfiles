@@ -53,14 +53,17 @@ printf "%-16s\n\
 %-16s%-8s\n\
 %-16s%-8s\n\
 %-16s%-8s\n\
-%s\n\n\n" '#!/bin/bash -e' '#title' ":$title" '#description' \
+%s\n\n\
+%s\n\n\n\
+%s\n\n\
+%s" '#!/bin/bash -e' '#title' ":$title" '#description' \
 ":${dscrpt}" '#author' ":$name" '#date' ":$today" '#version' \
 ":$vnum" '#usage' ":./$title" '#notes' ':' '#bash_version' \
-":${BASH_VERSION}" \#$div${div} > $title
+":${BASH_VERSION}" \#$div${div} 'function main {' '}' 'main "$@"'  > $title
 
 # Make the file executable.
 chmod +x $title
 
 /usr/bin/clear
-vim +12 $title
+vim +13 $title
 

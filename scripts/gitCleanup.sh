@@ -1,4 +1,4 @@
-#!/bin/bash -   
+#!/bin/bash  -e   
 #title          :git-cleanup.sh
 #description    :Cleans old branches and remotes from a local Git repository
 #author         :ef0ntan
