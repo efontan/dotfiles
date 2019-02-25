@@ -30,6 +30,7 @@
     cm = commit -m
     lognm = log --no-merges -n
     cob = checkout -b
+    colast = git checkout -
     lastcommit = rev-list --max-parents=0 HEAD
     logs = log --show-signature
 [commit]
