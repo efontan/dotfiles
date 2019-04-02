@@ -1,6 +1,6 @@
 [user]
-	name = Emmanuel Fontan
-	email = efontan@despegar.com
+	name = Github User
+	email = mail@gmail.com
 [color]
     branch = true
     interactive = auto
@@ -12,7 +12,8 @@
     keepBackup = false
 [core]
     editor = vim
-	ignorecase = false
+    autocrlf = true
+    ignorecase = false
 [merge]
     tool = meld
 [alias]
@@ -29,7 +30,8 @@
     cm = commit -m
     lognm = log --no-merges -n
     cob = checkout -b
+    colast = git checkout -
     lastcommit = rev-list --max-parents=0 HEAD
-	logs = log --show-signature
+    logs = log --show-signature
 [commit]
-	gpgsign = true
+    gpgsign = true

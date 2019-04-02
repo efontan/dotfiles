@@ -129,15 +129,15 @@ function color_my_prompt {
 }
 color_my_prompt
 
+export GPG_TTY=$(tty)
+
 JAVA_HOME="/usr/lib/jvm/java-8-oracle"
 PATH=$PATH:JAVA_HOME/bin
 M2_HOME=/home/efontan/bin/apache-maven-3.2.1
 M2=$M2_HOME/bin
-GRADLE=/opt/gradle/gradle-3.4.1
 PATH=$M2:$PATH
 JMETER=/home/efontan/bin/apache-jmeter-3.0/bin
 PATH=$PATH:$JMETER
-PATH=$PATH:$GRADLE/bin
 PATH=$PATH:~/bin
 
 export PATH
