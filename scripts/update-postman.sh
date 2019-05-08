@@ -3,7 +3,7 @@
 # Download and install the latest version of Postman for Ubuntu. Create .desktop file. 
 # Usage: sudo ./update-postman.sh
 # Based on https://gist.github.com/Jekis/722e286251eab7fc4e9b2caf732cf16d
-# 
+
 INSTALL_DIR=/opt/postman
 
 if [ "$(whoami)" != "root" ]
