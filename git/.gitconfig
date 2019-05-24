@@ -12,8 +12,7 @@
     keepBackup = false
 [core]
     editor = vim
-    autocrlf = true
-    ignorecase = false
+	ignorecase = false
 [merge]
     tool = meld
 [alias]
@@ -30,8 +29,15 @@
     cm = commit -m
     lognm = log --no-merges -n
     cob = checkout -b
-    colast = git checkout -
+    colast = checkout -
     lastcommit = rev-list --max-parents=0 HEAD
     logs = log --show-signature
+    sync = !git fetch origin master:master && git merge master
+    syncb = !git fecth $1:$1 && git merge $1
 [commit]
-    gpgsign = true
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+

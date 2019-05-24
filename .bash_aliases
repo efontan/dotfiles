@@ -25,3 +25,5 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+alias gitCleanup='/home/efontan/dotfiles/scripts/gitCleanup.sh'
+
