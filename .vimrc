@@ -4,12 +4,9 @@ set hlsearch
 " Show matching brackets when text indicator is over them
 set showmatch
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
-
 colorscheme desert
 set background=dark
 
@@ -20,16 +17,27 @@ set encoding=utf8
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Tabs & spaces
-set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
-
-set shiftwidth=4    " Indents will have a width of 4
-
-set softtabstop=4   " Sets the number of columns for a TAB
-
+set tabstop=2       " The width of a TAB is set to 2
+set shiftwidth=2    " Indents will have a width of 2
+set softtabstop=2   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 
-" Show line numbers
-:set number
+set ruler           "Enable limited line numbering
+set showmatch
+
+set autoread        "Reload files changed outside vim
+
+set wrap            "Wrap lines
+set linebreak       "Wrap lines at convenient points
+
+" ================ Turn Off Swap Files ==============
+set noswapfile
+set nobackup
+set nowb
+
+" ===================== Search ======================
+set hlsearch  " Highlight all search results
+
+set title           "Set the terminal title
+
+set visualbell      "make the bell visual
