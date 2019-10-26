@@ -9,6 +9,7 @@ export ZSH="/Users/efontan/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,7 +73,6 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
-  docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,28 +100,14 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias merge='git merge'
 alias redisc='redis-commander'
+alias ttop="top -ocpu -R -F -s 2 -n30"
+alias reloadzsh="source ~/.zshrc"
+alias pip="pip3"
+alias python="python3"
+# alias code="/Applications/Visual\ Studio\ Code.app/contents/Resources/app/bin/code"
 
-# ASAPP stuff
-alias asapp="cd /Users/efontan/github/asapp && source misc/source-asapp-dev.sh"
-alias asappdc="docker-compose -f docker-compose-images.yml"
-alias wUp="/Users/efontan/github/local-dev/scripts/world-up.sh"
-alias wPs="/Users/efontan/github/local-dev/scripts/world-ps.sh"
-alias wPull="/Users/efontan/github/local-dev/scripts/world-pull.sh"
-alias wDown="/Users/efontan/github/local-dev/scripts/world-down.sh"
-
-## Docker
-# Kill all running containers.
-alias dockerkillall='docker kill $(docker ps -q)'
-# Delete all stopped containers.
-alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
-# Delete all untagged images.
-alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
-# Delete all stopped containers and untagged images.
-alias dockerclean='dockercleanc || true && dockercleani'
-# Restart Docker
-alias dockerrestart="osascript -e 'quit app \"Docker\"' && open -a Docker"
-# Container logs
-alias dockerlogs="docker logs -f"
+# Go
+alias gobuild="go build ./..."
 
 listening() {
     if [ $# -eq 0 ]; then
@@ -133,6 +119,11 @@ listening() {
     fi
 }
 
+# Docker aliases
+if [ -f ~/.docker_aliases ]; then
+  source ~/.docker_aliases
+fi
+
 # Custom Stuff
 
 function mkcd {
@@ -143,21 +134,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Show always fullpath on terminal
-
-export API_BRANCH=develop
-export AWS_DEFAULT_REGION=us-east-1
-export SECRETS_DECODE_KEY=wayofthecreator
-export GOPATH=/Users/efontan/github/asapp/go
-export GOROOT=/usr/local/opt/go/libexec
-#export GOROOT=/usr/local/bin/
-export ASAPP_ROOT=/Users/efontan/github/asapp/
-
 # Docker
 export COMPOSE_HTTP_TIMEOUT=200
 
-bindkey -e
-bindkey "^[^[[C" forward-word
-bindkey "^[^[[D" backward-word
-
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+DEFAULT_USER=`whoami`
+prompt_context() {}
