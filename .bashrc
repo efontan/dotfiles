@@ -84,13 +84,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+############################################################
+#                       CUSTOM CONFIG                      #
+############################################################
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -103,6 +99,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# Docker aliases
+if [ -f ~/.docker_aliases ]; then
+  source ~/.docker_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -129,6 +130,9 @@ function color_my_prompt {
 }
 color_my_prompt
 
+# To fix error: gpg: signing failed: Inappropriate ioctl for device
+# http://blog.bradlucas.com/posts/2017-11-05-gpg-signing-failed-inappropriate-ioctl-for-device-/
+# To test it: $ echo "test" | gpg --clearsign
 export GPG_TTY=$(tty)
 
 JAVA_HOME="/usr/lib/jvm/java-8-oracle"
