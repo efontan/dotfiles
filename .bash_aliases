@@ -27,3 +27,12 @@ fi
 
 alias gitCleanup='/home/efontan/dotfiles/scripts/gitCleanup.sh'
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Mkdir and cd into new dir
+function mkcd {
+  command mkdir $1 && cd $1
+}
