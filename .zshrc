@@ -110,7 +110,7 @@ alias gitCleanup='$HOME/github/dotfiles/scripts/gitCleanup.sh'
 alias redisc='redis-commander'
 alias ttop="top -ocpu -R -F -s 2 -n30"
 alias reloadzsh="source ~/.zshrc"
-alias updatebrew="brew update && brew upgrade"
+alias updatebrew="brew update && brew upgrade && brew doctor"
 
 # Go
 alias gobuild="go build ./..."
