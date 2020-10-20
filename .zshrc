@@ -102,19 +102,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="open ~/.zshrc"
 # alias ohmyzsh="open ~/.oh-my-zsh"
-alias ll="ls -al"
+alias ll='ls -al'
 alias pull='git pull origin'
 alias push='git push origin'
 alias merge='git merge'
 alias gitCleanup='$HOME/github/dotfiles/scripts/gitCleanup.sh'
 alias redisc='redis-commander'
-alias ttop="top -ocpu -R -F -s 2 -n30"
-alias reloadzsh="source ~/.zshrc"
-alias updatebrew="brew update && brew upgrade && brew doctor"
+alias ttop='top -ocpu -R -F -s 2 -n30'
+alias reloadzsh='source ~/.zshrc'
+alias updatebrew='brew update && brew upgrade && brew doctor'
 
 # Go
-alias gobuild="go build ./..."
-alias gotest="go test ./..."
+alias gobuild='go build ./...'
+alias gotest='go test ./...'
 
 listening() {
     if [ $# -eq 0 ]; then
@@ -136,12 +136,14 @@ function mkcd {
   command mkdir $1 && cd $1
 }
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Docker
 export COMPOSE_HTTP_TIMEOUT=200
+
+if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 # jenv
 export PATH="$HOME/.jenv/shims:$PATH"
