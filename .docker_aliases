@@ -1,6 +1,6 @@
 ## Docker aliases
 # Kill all running containers.
-alias dkkillall="docker kill $(docker ps -q)"
+alias dkkillall='docker kill $(docker ps -q)'
 # Delete all stopped containers.
 alias dkcleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
 # Delete all untagged images.
@@ -8,9 +8,9 @@ alias dkcleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(dock
 # Restart Docker
 alias dkrestart='killall Docker && open /Applications/Docker.app'
 # Container logs
-alias dklogs="docker logs -f"
+alias dklogs='docker logs -f'
 # See running containers
-alias dkps="docker ps -a"
+alias dkps='docker ps -a'
 # See container IP
 alias dkip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 # Docker run
@@ -18,18 +18,18 @@ alias dkrun='docker run'
 # Docker run -it
 alias dkexec='docker exec -it'
 # Start a container
-alias dkstart="docker start"
+alias dkstart='docker start'
 # Stop container
-alias dkstop="docker stop"
+alias dkstop='docker stop'
 # Kill container
-alias dkkill="docker kill"
+alias dkkill='docker kill'
 # Remove container
-alias dkrm="docker rm"
+alias dkrm='docker rm'
 # List volumes
-alias dkvls="docker volume ls"
+alias dkvls='docker volume ls'
 # Remove volume
-alias dkvrm="docker volume rm"
+alias dkvrm='docker volume rm'
 
 ## Kubernetes aliases
-alias k="kubectl"
-
+alias k='kubectl'
+alias kdp='kubectl describe pod'
