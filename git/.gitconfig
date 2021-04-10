@@ -12,9 +12,7 @@
     keepBackup = false
 [core]
     editor = vim
-	ignorecase = false
-[merge]
-    tool = meld
+    ignorecase = false
 [alias]
     co = checkout
     ci = commit -S
