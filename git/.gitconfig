@@ -1,6 +1,6 @@
 [user]
-	name = Github User
-	email = mail@gmail.com
+    name = Github User
+    email = mail@gmail.com
 [color]
     branch = true
     interactive = auto
@@ -33,9 +33,9 @@
     sync = !git fetch origin master:master && git merge master
     syncb = !git fecth $1:$1 && git merge $1
 [commit]
-	gpgsign = true
+    gpgsign = true
 [tag]
-	forceSignAnnotated = true
+    forceSignAnnotated = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 
